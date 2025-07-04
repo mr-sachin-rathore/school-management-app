@@ -6,6 +6,7 @@ Add env variables by creating .env file
 DATABASE_URL=
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL = /
 
 # db from neon postgress
 
