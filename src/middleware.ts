@@ -16,14 +16,14 @@ console.log(matchers);
 export default clerkMiddleware(async (auth, req) => {
   // if (isProtectedRoute(req)) auth().protect()
 
-  const { userId } = auth();
+  const { userId, sessionClaims } = auth();
 
-  if (!userId) {
-    return NextResponse.redirect(new URL(`/`, req.url));
-  }
-  const sessionClaims: any = await clerkClient.users.getUser(userId);
+  // if (!userId) {
+  //   return NextResponse.redirect(new URL(`/`, req.url));
+  // }
+  // const sessionClaims: any = await clerkClient.users.getUser(userId);
 
-  const role = (sessionClaims?.publicMetadata as { role?: string })?.role;
+  const role = (sessionClaims?.metadata as { role?: string })?.role;
 
   for (const { matcher, allowedRoles } of matchers) {
     if (matcher(req) && !allowedRoles.includes(role!)) {
