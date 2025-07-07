@@ -8,6 +8,9 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 CLERK_SECRET_KEY=
 NEXT_PUBLIC_CLERK_SIGN_IN_URL = /
 
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=
+NEXT_PUBLIC_CLOUDINARY_API_KEY=
+
 # db from neon postgress
 
 https://console.neon.tech/app/projects/broad-paper-19461376?database=neondb
@@ -15,6 +18,12 @@ https://console.neon.tech/app/projects/broad-paper-19461376?database=neondb
 # get from clerk
 
 https://dashboard.clerk.com/apps/app_2zOwqArz99NH7qdtLdCweS81HIk/instances/ins_2zOwqFAUvKgT8b5npsH7BQAyaYi/user-authentication/email-phone-username
+
+# cloudinary setup
+https://console.cloudinary.com/app/c-2b82bf3a9058bce358685dcb3f4d34/image/
+getting-started
+ also create upload preset from settings names it as "school" given in code like uploadPreset="school" here
+ https://console.cloudinary.com/app/c-2b82bf3a9058bce358685dcb3f4d34/settings/upload/presets
 
 # prisma setup Generate Prisma Client
 
